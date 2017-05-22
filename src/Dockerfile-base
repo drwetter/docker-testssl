@@ -18,7 +18,7 @@ RUN apk --update-cache upgrade && \
 RUN cd /tmp/ && \
     curl -L -O https://testssl.sh/${TARBALL} && \
     tar xvzf ${TARBALL} && \
-    cp -f bin/openssl.Linux.x86_64 /usr/bin/openssl && \
+    cp -f bin/openssl.Linux.x86_64.static /usr/bin/openssl && \
     rm -f ${TARBALL} && \
     rm -fr bin/
 
